@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>file.haus - Anonymous File Uploader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <main>
+        
+        <audio preload src="https://files.catbox.moe/27kco4.mp3" autoplay style="display: none;" id="audio_element" ></audio>
+        <!-- Import gifs -->
+
+        <img id="cat_loop" src="https://files.catbox.moe/nxrn1m.gif" alt="Cat GIF" />
+        <img id="the_rock" src="https://files.catbox.moe/0w9a8p.gif" alt="ROCK GIF" />
+        <img id="rabbit_i_think" src="https://files.catbox.moe/cxdvk0.gif" alt="RABBIT GIF" />
+        <img id="parrot_dancing" src="https://files.catbox.moe/al65x3.gif" alt="PARROT GIF" />
+
+
+        <h1>file.haus</h1>
+        <b>FREE DUROV UNTIL IT'S BACKWARDS</b>
+
+        <p>
+            <label for="torrent">Upload as torrent:</label>
+            <input type="checkbox" id="torrent" name="torrent">
+            <label for="expiry">Temporary upload:</label>
+            <select id="expiry" name="expiry">
+                <option value="0">Infinite</option>
+                <option value="3600">1 Hour</option>
+                <option value="86400">1 Day</option>
+                <option value="259200">3 Days</option>
+                <option value="604800">1 Week</option>
+                <option value="2592000">1 Month</option>
+            </select><br>
+            <script>document.write('<input type="file" id="filetoupload"><br>');</script>
+            <br>
+        </p>
+        <noscript>
+            <form action="api/upload/" method="post" enctype="multipart/form-data">
+                <label for="file">Choose file:</label>
+                <input type="file" id="file" name="file">
+                <button type="submit">Upload</button>
+            </form>
+        </noscript>
+        <p>
+            <progress id="upload-progress"></progress>
+        </p>
+
+        <p id="message"></p>
+        <p>max 300gb filesize</p>
+        <p>Support anonymous file sharing:</p>
+        <p>Donate to our XMR address:</p>
+        <p id="xmrAddress" class="xmr-address">
+        488DuSeQrh85TbxEcF4zTG3YYUwT8XB4L48H7innqZk74Vev7w4nSmLDReP2RQUoP1PAUJStNQUbFb4vnHKnNNvvLEmexRV        </p>
+        <p class="disclaimer">
+        2024-27-08: updated homepage to include BrainRot       </p>
+        <p>
+            <a href="about.php">About</a> / <a href="nojs.php">JavaScript-less uploader</a> / <a href="deletions.php">Deletion Log</a>  / <a href="https://fuckthefeds.top">Fuck The Feds Guide</a> /
+            <a href="https://file.haus">file.haus (probably offline forever)</a> / <a href="https://filehaus.top">filehaus.top (online)</a> / <a href="https://filehaus.pk">filehaus.pk (online)</a> / <a href="https://filehaus.su">filehaus.su (online)</a>  / <a href="http://fileha3hjvudqs2moembtaegnpjo5ptec3tomf5dlxx6ydwtajkkahyd.onion">.onion (online)</a><br>
+        </p>
+        <p>Dedicated to my friends</p>
+    </main>
+</body>
+</html>
